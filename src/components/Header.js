@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import { Box, IconButton, Stack } from "@mui/material";
+import { Box, IconButton, Stack, TextField } from "@mui/material";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -32,7 +32,8 @@ const Header = () => {
     <Box sx={{
       width: '100%',
       maxWidth: 650,
-      p: 0
+      p: 0,
+      pt: 3
     }}>
       <Card sx={{p: 0, boxShadow: 4, borderRadius: 2}}>
         <CardContent sx={{display: 'flex', flexDirection: 'column', rowGap: 1.5, p: 1, py: !open ? 0.5 : 1}}>
@@ -43,7 +44,14 @@ const Header = () => {
             </IconButton>
           </Stack>
           <Stack onClick={toggleCardOpen} direction="row" columnGap={2}>
-            <input placeholder="Take a note..." className="noteInput" type="text" />
+            <TextField
+              fullWidth
+              sx={{p: '5px'}}
+              placeholder="Take a note..."
+              multiline
+              maxRows={20}
+              variant="standard"
+            />
             <IconButton sx={{display: !open ? '' : 'none', p: 1}}>
               <CreateOutlinedIcon />
             </IconButton>

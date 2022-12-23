@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Header from "../components/Header";
+import NotesLayout from "../components/NotesLayout";
 
 const Archive = () => {
   return (
@@ -8,7 +9,7 @@ const Archive = () => {
       minHeight: '100vh',
       width: '100%'
     }}>
-      <h1>Archive</h1>
+      <NotesLayout />
     </Box>
   )
 }

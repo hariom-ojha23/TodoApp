@@ -1,6 +1,7 @@
 import React from "react";
-import { Stack, Box } from "@mui/material";
+import { Stack, Box, Typography } from "@mui/material";
 import Header from '../components/Header'
+import NotesLayout from "../components/NotesLayout";
 
 
 const Reminders = () => {
@@ -9,9 +10,10 @@ const Reminders = () => {
       minHeight: '100vh',
       width: '100%'
     }}>
-      <Stack direction="row" justifyContent="center">
+      <Stack direction="row" justifyContent="center" sx={{mb: 10}}>
         <Header />
       </Stack>
+      <NotesLayout />
     </Box>
   )
 }

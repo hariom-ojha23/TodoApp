@@ -5,21 +5,38 @@ a {
   color: inherit;
 }
 
+.css-4dergt-MuiInputBase-root-MuiInput-root:before,
+.css-4dergt-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: none !important;
+}
+
+.css-4dergt-MuiInputBase-root-MuiInput-root {
+  padding: 0 !important;
+}
+.css-8bl970-MuiFormControl-root-MuiTextField-root {
+  justify-content: center;
+}
+
 input {
-  padding: 5px !important;
   font-weight: 500;
   border: none;
   width: 100%;
 }
 
-input:focus {
+input:focus, textarea:focus {
   outline: none;
 }
 
 .titleInput {
+  padding: 5px !important;
   font-size: 17px;
 }
 .noteInput {
   font-size: 16px;
   color: #3b3939;
+}
+
+.notesCard:hover {
+  box-shadow: 1px 1px 10px #d7d7d7, -1px -1px 10px #d7d7d7, 0px 0px 10px #d7d7d7;
+  border: 1.5px solid #d7d7d7
 }
