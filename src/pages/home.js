@@ -2,8 +2,15 @@ import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import Header from "../components/Header";
 import NotesLayout from '../components/NotesLayout'
+import { useSelector, useDispatch } from "react-redux";
 
 const Home = () => {
+
+  const {notesList} = useSelector(state => state.notes)
+  const dispatch = useDispatch()
+
+  console.log(notesList)
+
   return (
     <Box sx={{
       minHeight: '100vh',
