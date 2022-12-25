@@ -1,18 +1,23 @@
 import React from "react";
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import SingleNote from "./SingleNote";
+import { Droppable } from "react-beautiful-dnd";
+import { Box } from "@mui/material";
 
-const NotesLayout = () => {
-
+const NotesLayout = (props) => {
+  const { notesList, id } = props;
   return (
-    <ImageList sx={{p: 1}}  cols={4} gap={10}>
-      {[1,2,3,4,5,6].map((item) => (
-        <ImageListItem key={item}>
-          <SingleNote />
-        </ImageListItem>
-      ))}
-    </ImageList>
+    <Droppable droppableId={id}>
+      {(provided) => (
+        <div ref={provided.innerRef} {...provided.droppableProps}>
+          <Box>
+            {notesList.map((item, index) => (
+              <SingleNote key={item.id} item={item} index={index} id={id} />
+            ))}
+            {provided.placeholder}
+          </Box>
+        </div>
+      )}
+    </Droppable>
   );
 };
 

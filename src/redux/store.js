@@ -1,8 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import notesReducer from "./notes";
+import pinnedNotesReducer from "./pinnedNotes";
+import otherNotesReducer from "./otherNotes";
+import archivedNotesReducer from "./archivedNotes";
 
 export const store = configureStore({
   reducer: {
-    notes: notesReducer
+    pinnedNotes: pinnedNotesReducer,
+    otherNotes: otherNotesReducer,
+    archivedNotes: archivedNotesReducer,
   },
-})
+});
